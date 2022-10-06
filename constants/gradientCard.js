@@ -1,5 +1,4 @@
-let gradientCards = [
-    {
+let gradientCards = [{
         id: 1,
         gradientColor: 'linear-gradient(to right, #6d28d9, #db2777)',
         gradientName: 'daring new color monster',
@@ -101,10 +100,13 @@ gradientCards.forEach((element) => {
             <div class="title_with_copy_btn">
                 <h1 class="gradient_title" style="background:${element.gradientColor};-webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;">${element.gradientName}</h1>
-                <button><ion-icon name="copy-outline"></ion-icon></button>
+                <button class="copy_to_clipboard" data-clipboard-text="background:${element.gradientColor};" ><ion-icon name="copy-outline"></ion-icon></button>
             </div>
             <p class="gradient_maker">by ${element.gradientMaker}</p>
         </div>
-    </div>
+     </div>
     `;
 })
+
+
+

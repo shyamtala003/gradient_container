@@ -6,6 +6,33 @@
     text-decoration: none;
 }
 
+span#notify_toast
+{
+    position: fixed;
+    top: 90%;
+    right:5%;
+    background: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(110px);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color:#fff;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    z-index: 2;
+    transition: all .5s ease;
+}
+
+.hide_toast
+{
+    opacity: 0;
+}
+
+.show_toast
+{
+    opacity: 1;
+}
+
 .container {
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     background: linear-gradient(to right, #6d28d9, #db2777);
@@ -142,7 +169,7 @@ main.hero_section {
 
 .gradient_container {
     max-width: 100vw;
-    padding-top: 2.5rem;
+    padding-block: 2.5rem;
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     padding-inline: 8%;
     display: grid;
@@ -218,6 +245,11 @@ main.hero_section {
     font-size: 1.1rem;
     line-height: 20px;
     font-weight: 600;
+}
+
+span.copy_text
+{
+    visibility:hidden;
 }
 
 @media screen and (max-width:640px) {
