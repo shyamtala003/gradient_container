@@ -6,6 +6,21 @@
     text-decoration: none;
 }
 
+::-webkit-scrollbar
+{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track
+{
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(to top, #6c28d9, #db2778);
+}
+
 span#notify_toast
 {
     position: fixed;
