@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+}
+
+.container {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    width: 100vw;
+    min-height: 50vh;
+    background: linear-gradient(to right, #6d28d9, #db2777);
+    padding-inline: 8%;
+}
+
+h1.logo_text {
+    padding-block: 1.5rem;
+    font-size: 20px;
+    line-height: 32px;
+    color: #ffffffa4;
+    border-bottom: 1px solid #ffffff4e;
+}
+
+main.hero_section {
+    padding-block: 3rem;
+}
+
+.hero_section h2 {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.hero_section h2:nth-child(2) {
+    color: #c4b5fb;
+}
+
+.form {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+
+}
+
+.form input {
+    padding: 12px 24px;
+    width: min(100%, 350px);
+    border-radius: 5px;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    border: none;
+    outline: none;
+}
+
+.form input::placeholder {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.form input:hover,
+.form input:focus {
+    outline: 3px solid rgba(255, 255, 255, .4);
+}
+
+.form button.notify_btn {
+    padding: 12px 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #ffffff;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, .2);
+}
+
+.form button.notify_btn ion-icon {
+    scale: 1.4;
+    --ionicon-stroke-width: 46px;
+}
+
+.form button.notify_btn:hover {
+    background: rgba(255, 255, 255, .4);
+    margin-top: -10px;
+}
+
+.hero_section p.message {
+    margin-top: 1rem;
+    color: #d1d5db;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.hero_section p.message span {
+    display: block;
+    color: #d1d5db;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+@media screen and (max-width:640px) {
+    .container {
+        padding-inline: 15px;
+    }
+
+    .hero_section h2 {
+        font-size: 30px;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .form input
+    {
+        width: 100%;
+    }
+
+    .form button
+    {
+        width: 100%;
+    }
+
+
+}
