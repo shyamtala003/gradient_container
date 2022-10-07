@@ -6,31 +6,28 @@
     text-decoration: none;
 }
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
     width: 10px;
 }
 
-::-webkit-scrollbar-track
-{
+::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
     background: linear-gradient(to top, #6c28d9, #db2778);
 }
 
-span#notify_toast
-{
+/* code for toast msg */
+span#notify_toast {
     position: fixed;
     top: 90%;
-    right:5%;
+    right: 5%;
     background: rgba(0, 0, 0, .8);
     backdrop-filter: blur(110px);
     padding: 10px 20px;
     border-radius: 5px;
-    color:#fff;
+    color: #fff;
     font-family: sans-serif;
     font-weight: 700;
     font-size: 1.1rem;
@@ -38,14 +35,92 @@ span#notify_toast
     transition: all .5s ease;
 }
 
-.hide_toast
-{
+.hide_toast {
     opacity: 0;
 }
 
-.show_toast
-{
+.show_toast {
     opacity: 1;
+}
+
+/* code for create gradient dropdoan */
+.color_maker {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: all .5s;
+}
+
+.color_maker_close {
+    top: -50%;
+}
+
+#gradient_card_edit {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#gradient_card_edit input[type="text"] {
+    color: whitesmoke;
+    margin-top: 3em;
+}
+
+#gradient_card_edit #close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    transition: all .5s;
+}
+
+#gradient_card_edit #close:hover {
+    scale: 1.5;
+    background: rgba(255, 255, 255, .1);
+}
+
+
+#color_inputs button {
+    font-size: 1.4rem;
+    color: #000;
+    cursor: pointer;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+#color_inputs button ion-icon {
+    --ionicon-stroke-width: 26px;
+}
+
+/* make color maker div responsive */
+@media screen and (max-width:380px) {
+    .color_maker {
+        width: 100%;
+        min-height:100vh;
+    }
+
+    .color_maker .gradient_card
+    {
+        width: 100%;
+        min-height:100vh;
+        box-shadow: none;
+    }
+
+    .color_maker .gradient_card::before
+    {
+        display: none;
+    }
 }
 
 .container {
@@ -59,7 +134,7 @@ h1.logo_text {
     padding-block: 1.5rem;
     font-size: 20px;
     line-height: 32px;
-    color: #ffffffa4;
+    color: #ffffffd6;
     border-bottom: 1px solid #ffffff4e;
 }
 
@@ -111,7 +186,7 @@ main.hero_section {
     outline: 3px solid rgba(255, 255, 255, .4);
 }
 
-.form button.notify_btn {
+.form a.btn {
     padding: 12px 24px;
     display: inline-flex;
     align-items: center;
@@ -126,32 +201,17 @@ main.hero_section {
     border-radius: 5px;
     transition: all .3s ease-in-out;
     border: 1px solid rgba(255, 255, 255, .2);
+    cursor: pointer;
 }
 
-.form button.notify_btn ion-icon {
+.form a.btn ion-icon {
     scale: 1.4;
     --ionicon-stroke-width: 46px;
 }
 
-.form button.notify_btn:hover {
+.form a.btn:hover {
     background: rgba(255, 255, 255, .4);
     margin-top: -10px;
-}
-
-.hero_section p.message {
-    margin-top: 1rem;
-    color: #d1d5db;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 400;
-}
-
-.hero_section p.message span {
-    display: block;
-    color: #d1d5db;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 400;
 }
 
 
@@ -173,7 +233,7 @@ main.hero_section {
         width: 100%;
     }
 
-    .form button {
+    .form a {
         width: 100%;
     }
 
@@ -223,8 +283,7 @@ main.hero_section {
     border-bottom-right-radius: 5px;
 }
 
-.colors
-{
+.colors {
     background: rgba(255, 255, 255, .8);
     -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px);
@@ -232,19 +291,34 @@ main.hero_section {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap:1rem;
+    gap: 1rem;
 }
 
+
+
 input[type="color"] {
-	-webkit-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     width: 20px;
-	height: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
+
 input[type="color"]::-webkit-color-swatch-wrapper {
-	padding: 0;
+    padding: 0;
 }
+
 input[type="color"]::-webkit-color-swatch {
-	border: none;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="color"]::-moz-color-swatch {
+    border-radius: 5px;
+    border: none;
 }
 
 .title_with_copy_btn {
@@ -278,18 +352,15 @@ input[type="color"]::-webkit-color-swatch {
     background: #fff;
     padding-inline: 15px;
     padding-bottom: 8px;
+    padding-top: 6px;
     color: #adb1b5;
-    font-size: 1.1rem;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 24px;
     font-weight: 600;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-span.copy_text
-{
-    visibility:hidden;
-}
 
 @media screen and (max-width:640px) {
     .gradient_container {
@@ -301,8 +372,7 @@ span.copy_text
         line-height: 20px;
     }
 
-    .gradient_info p
-    {
+    .gradient_info p {
         font-size: .9rem;
     }
 }
