@@ -45,7 +45,7 @@ span#notify_toast {
 
 /* code for create gradient dropdoan */
 .color_maker {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

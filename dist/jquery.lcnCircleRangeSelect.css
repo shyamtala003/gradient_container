@@ -7,7 +7,7 @@ input.circle-range-select {
     max-width: 100%;
     width: 10em;
     height: 10em;
-    margin:1.4rem 0.65em 0.65em 0.65em;
+    margin:auto 0.65em 45% 0.65em;
     padding: 0.65em !important;
     border-radius: 50%;
     border: 0.4em solid rgba(204, 204, 204, 0.326);
