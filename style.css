@@ -54,7 +54,7 @@ span#notify_toast {
 }
 
 .color_maker_close {
-    top: -50%;
+    top: -100%;
 }
 
 #gradient_card_edit {
