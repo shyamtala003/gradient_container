@@ -7,15 +7,7 @@
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(to top, #6c28d9, #db2778);
+    display: none;
 }
 
 /* code for toast msg */
@@ -123,27 +115,12 @@ span#notify_toast {
 
 .container {
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    background: linear-gradient(90deg, #6d28d9,#db2777,#feac5e, #c779d0, #4bc0c8);
-    /* background:linear-gradient(to right, #6d28d9, #db2777); */
-    background-size: 600% 600%;
+    background: linear-gradient(to right, #6d28d9, #db2777);
     padding-inline: 8%;
     overflow-x: hidden;
-    animation: gradient 16s ease infinite;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
 
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
 
 
 h1.logo_text {
@@ -165,9 +142,6 @@ main.hero_section {
     color: #ffffff;
 }
 
-.hero_section h2:nth-child(2) {
-    color: #ffffff;
-}
 
 .form {
     margin-top: 1.5rem;
@@ -235,6 +209,9 @@ main.hero_section {
 @media screen and (max-width:640px) {
     .container {
         padding-inline: 15px;
+        background: linear-gradient(90deg, #6d28d9, #db2777, #feac5e, #c779d0, #4bc0c8);
+        background-size: 600% 600%;
+        animation: gradient 16s ease infinite;
     }
 
     .hero_section h2 {
@@ -253,142 +230,156 @@ main.hero_section {
         width: 100%;
     }
 
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+
+    }
 }
 
+    /* gradient container section */
 
-/* gradient container section */
-
-.gradient_container {
-    max-width: 100vw;
-    padding-block: 2.5rem;
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    padding-inline: 8%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-    gap: 5rem;
-    overflow-x: hidden;
-}
-
-.gradient_card {
-    position: relative;
-    min-width: 260px;
-    min-height: 300px;
-    box-shadow: 0px 10px 40px #cec7c7;
-    border-radius: 5px;
-    /* overflow: hidden; */
-}
-
-
-.gradient_card:hover::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    scale: 1.02;
-    filter: blur(30px);
-    z-index: -1;
-}
-
-
-.gradient_info {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-.colors {
-    background: rgba(255, 255, 255, .8);
-    -webkit-backdrop-filter: blur(25px);
-    backdrop-filter: blur(25px);
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
-}
-
-
-
-input[type="color"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-input[type="color"]::-webkit-color-swatch-wrapper {
-    padding: 0;
-}
-
-input[type="color"]::-webkit-color-swatch {
-    border-radius: 5px;
-    border: none;
-}
-
-input[type="color"]::-moz-color-swatch {
-    border-radius: 5px;
-    border: none;
-}
-
-.title_with_copy_btn {
-    background: #fff;
-    padding-inline: 15px;
-    padding-top: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: .5rem;
-}
-
-.title_with_copy_btn h1.gradient_title {
-    font-size: 1.3rem;
-    line-height: 24px;
-    text-transform: capitalize;
-}
-
-.title_with_copy_btn button {
-    font-size: 1.6rem;
-    color: #a5abae;
-    cursor: pointer;
-    background: transparent;
-}
-
-.title_with_copy_btn button ion-icon {
-    --ionicon-stroke-width: 56px;
-}
-
-.gradient_info p {
-    background: #fff;
-    padding-inline: 15px;
-    padding-bottom: 8px;
-    padding-top: 6px;
-    color: #adb1b5;
-    font-size: 1rem;
-    line-height: 24px;
-    font-weight: 600;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-
-@media screen and (max-width:640px) {
     .gradient_container {
+        max-width: 100vw;
+        padding-block: 2.5rem;
+        font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        padding-inline: 8%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+        gap: 5rem;
+        overflow-x: hidden;
+    }
+
+    .gradient_card {
+        position: relative;
+        min-width: 260px;
+        min-height: 300px;
+        box-shadow: 0px 10px 40px #cec7c7;
+        border-radius: 5px;
+        /* overflow: hidden; */
+    }
+
+
+    .gradient_card:hover::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        scale: 1.02;
+        filter: blur(30px);
+        z-index: -1;
+    }
+
+
+    .gradient_info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .colors {
+        background: rgba(255, 255, 255, .8);
+        -webkit-backdrop-filter: blur(25px);
+        backdrop-filter: blur(25px);
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+
+
+    input[type="color"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type="color"]::-webkit-color-swatch-wrapper {
+        padding: 0;
+    }
+
+    input[type="color"]::-webkit-color-swatch {
+        border-radius: 5px;
+        border: none;
+    }
+
+    input[type="color"]::-moz-color-swatch {
+        border-radius: 5px;
+        border: none;
+    }
+
+    .title_with_copy_btn {
+        background: #fff;
         padding-inline: 15px;
+        padding-top: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .5rem;
     }
 
     .title_with_copy_btn h1.gradient_title {
-        font-size: 1.1rem;
-        line-height: 20px;
+        font-size: 1.3rem;
+        line-height: 24px;
+        text-transform: capitalize;
+    }
+
+    .title_with_copy_btn button {
+        font-size: 1.6rem;
+        color: #a5abae;
+        cursor: pointer;
+        background: transparent;
+    }
+
+    .title_with_copy_btn button ion-icon {
+        --ionicon-stroke-width: 56px;
     }
 
     .gradient_info p {
-        font-size: .9rem;
+        background: #fff;
+        padding-inline: 15px;
+        padding-bottom: 8px;
+        padding-top: 6px;
+        color: #adb1b5;
+        font-size: 1rem;
+        line-height: 24px;
+        font-weight: 600;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
-}
+
+
+    @media screen and (max-width:640px) {
+        .gradient_container {
+            padding-inline: 15px;
+        }
+
+        .title_with_copy_btn h1.gradient_title {
+            font-size: 1.1rem;
+            line-height: 20px;
+        }
+
+        .gradient_info p {
+            font-size: .9rem;
+        }
+    }

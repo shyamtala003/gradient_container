@@ -103,6 +103,111 @@ let gradientCards = [{
         gradientName: 'smoothy',
         gradientMaker: 'ShyamTala'
     },
+    {
+        id: 16,
+        colors: ['#3a6186', '#89253e'],
+        gradientColor: 'linear-gradient(90deg, #3a6186, #89253e)',
+        gradientName: 'love couple',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: 17,
+        colors: ['#FD297A', '#9424F0'],
+        gradientColor: 'linear-gradient(90deg, #FD297A, #9424F0)',
+        gradientName: 'cripy',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: 18,
+        colors: ['#FED54A', '#FF9347'],
+        gradientColor: 'linear-gradient(90deg, #FED54A, #FF9347)',
+        gradientName: 'sunset',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: 19,
+        colors: ['#70e1f5', '#ffd194'],
+        gradientColor: 'linear-gradient(90deg, #70e1f5, #ffd194)',
+        gradientName: 'shore',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: 20,
+        colors: ['#00c6ff', '#0072ff'],
+        gradientColor: 'linear-gradient(90deg, #00c6ff, #0072ff)',
+        gradientName: 'Facebook Messenger',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: 21,
+        colors: ['#d38312', '#a83279'],
+        gradientColor: 'linear-gradient(90deg, #d38312, #a83279)',
+        gradientName: 'Crazy Orange!',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: 22,
+        colors: ['#43cea2', '#185a9d'],
+        gradientColor: 'linear-gradient(90deg, #43cea2, #185a9d)',
+        gradientName: 'Endless river!',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: 23,
+        colors: ['#ffb347', '#ffcc33'],
+        gradientColor: 'linear-gradient(90deg, #ffb347, #ffcc33)',
+        gradientName: 'Crazy Orange!',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: 24,
+        colors: ['#FEAC5E', '#C779D0','#4BC0C8'],
+        gradientColor: 'linear-gradient(90deg,#FEAC5E, #C779D0, #4BC0C8)',
+        gradientName: 'Atlas!',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: 25,
+        colors: ['#7b4397', '#dc2430'],
+        gradientColor: 'linear-gradient(90deg,#7b4397, #dc2430)',
+        gradientName: 'virgin america',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: 26,
+        colors: ['#fc00ff', '#00dbde'],
+        gradientColor: 'linear-gradient(90deg,#fc00ff, #00dbde)',
+        gradientName: 'timber',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: 27,
+        colors: ['#f46b45', '#eea849'],
+        gradientColor: 'linear-gradient(90deg,#f46b45, #eea849)',
+        gradientName: 'master card',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: 28,
+        colors: ['#00C9FF', '#92FE9D'],
+        gradientColor: 'linear-gradient(90deg,#00C9FF, #92FE9D)',
+        gradientName: 'back to earth',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: 29,
+        colors: ['#fd746c', '#ff9068'],
+        gradientColor: 'linear-gradient(90deg,#fd746c, #ff9068)',
+        gradientName: 'haikus',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: 30,
+        colors: ['#3434e6', '#ec6ead'],
+        gradientColor: 'linear-gradient(90deg,#3434e6, #ec6ead)',
+        gradientName: 'vice city',
+        gradientMaker: 'ShyamTala'
+    },
 ];
 
 
