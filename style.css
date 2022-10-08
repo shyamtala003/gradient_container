@@ -7,7 +7,7 @@
 }
 
 ::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
 }
 
 /* code for toast msg */
@@ -381,5 +381,192 @@ main.hero_section {
 
         .gradient_info p {
             font-size: .9rem;
+        }
+    }
+
+    footer
+    {
+        padding: 4rem 8%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        justify-content: center;
+        font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 18px;
+        line-height: 28px;
+        color: #374151;
+    }
+
+    footer p.text
+    {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+
+    .subscription_form
+    {
+        max-width: 650px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    footer input[type="email"]
+    {
+        padding: 10px;
+        border: 2px solid #D1D5DB;
+        font-size: .8rem;
+        width:100%;
+        border-radius: 5px;
+    }
+
+    footer input[type="email"]::placeholder
+    {
+        padding: 10px;
+        font-size: .8rem;
+    }
+
+    footer input[type="email"]:focus
+    {
+        border: 1px solid #7c3aed;
+        outline: none;
+    }
+
+    button.subscribe
+    {
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background:linear-gradient(to right, #6d28d9, #db2777);
+        color: #ffffff;
+        font-size: .8rem;
+        font-weight: 600;
+        border-radius: 5px;
+        transition: all .5s;
+    }
+
+    button.subscribe:hover
+    {
+        background:linear-gradient(90deg,#fd746c, #ff9068);
+        transform: translateY(-10%);
+        box-shadow: 0px 3px 10px #c2c6cc;
+    }
+
+    button.subscribe ion-icon
+    {
+        font-size: 1.2rem;
+        --ionicon-stroke-width: 36px;
+    }
+
+    .contributor_desc
+    {
+        margin-top: 2rem;
+        max-width: 650px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .contributor_desc img.profile
+    {
+        width: 80px;
+        border-radius: 50%;
+    }
+
+    .desc .title
+    {
+        font-weight: 700;
+    }
+
+    .desc .detailed
+    {
+        font-weight: 400;
+        line-height: 20px;
+        color: #374151;
+    }
+
+    .desc a
+    {
+        display: inline-block;
+        margin-top: 5px;
+        font-size: 16px;
+        color: #be185d;
+        border-bottom: 2px solid;
+    }
+
+    .social_links
+    {
+        margin-top: 5rem;
+        display: flex;
+        gap: 1.8rem;
+        font-size: 1.3rem;
+    }
+
+    .social_links a
+    {
+        font-size: 1.3rem;
+        color:#9ca3af;
+        transition: all .4s;
+    }
+
+    .social_links a:hover
+    {
+        color:#737982;
+        transform: translateY(-20%);
+    }
+
+    p.copyright
+    {
+        margin-top: .5rem;
+        color: #9ca3af;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        text-align: center;
+    }
+
+    @media screen and (max-width:510px){
+        footer
+        {
+            padding: 1rem 15px;
+        }
+
+        footer p.text
+        {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+        
+        .subscription_form
+        {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .subscription_form .subscribe
+        {
+            width: 100%;
+        }
+
+        .contributor_desc
+        {
+            /* flex-direction: column; */
+            gap: .6rem;
+        }
+
+        .desc .detailed.d2
+        {
+
+            display: none;
         }
     }

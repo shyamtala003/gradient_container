@@ -16,7 +16,7 @@
     <!-- circular range slider -->
     <link rel="stylesheet" href="./dist/jquery.lcnCircleRangeSelect.css">
     <script defer src="./dist/jquery.lcnCircleRangeSelect.js"></script>
-    
+
     <!-- general style sheet -->
     <link rel="stylesheet" href="./style.css">
 
@@ -27,15 +27,20 @@
 
     <div class="color_maker color_maker_close">
         <div class="gradient_card" id="gradient_card_edit">
-            <button id="close"><ion-icon name="close"></ion-icon></button>
-            <input type="text" class="circle-range-select" id="rangeSlider" data-single-value data-auto-init value="34" onchange="generateGradient()">
+            <button id="close">
+                <ion-icon name="close"></ion-icon>
+            </button>
+            <input type="text" class="circle-range-select" id="rangeSlider" data-single-value data-auto-init value="34"
+                onchange="generateGradient()">
             <div class="gradient_info">
                 <div class="colors" id="color_inputs">
-                    <button id="add_input_btn" onclick="addColorInputer()"><ion-icon name="add-outline"></ion-icon></button>
+                    <button id="add_input_btn" onclick="addColorInputer()">
+                        <ion-icon name="add-outline"></ion-icon>
+                    </button>
                     <input class="color colorinput" type="color" value="#6d28d9" id="c1" oninput="generateGradient()">
                     <input class="color colorinput" type="color" value="#db2777" id="c2" oninput="generateGradient()">
                 </div>
-                
+
                 <div class="title_with_copy_btn">
                     <button class="copy_to_clipboard" id="color_maker_copy_btn"
                         data-clipboard-text="background:linear-gradient(to right, #6d28d9, #db2777);">
@@ -81,13 +86,56 @@
 
     </div>
 
+    <footer>
+        <p class="text">Join my newsletter to hear about new projects, content and articles that I publish.</p>
+        <div class="subscription_form">
+            <input type="email" placeholder="Enter your email" name="email" id="email_input">
+            <button class="subscribe">
+                <ion-icon name="mail-outline"></ion-icon> Subscribe
+            </button>
+        </div>
+
+        <div class="contributor_desc">
+            <img src="./images/shyam_tala.jpg" class="profile" alt="">
+            <div class="desc">
+                <p class="title">Hey there, 👋</p>
+                <p class="detailed d1">I’m Shyam - a full-stack developer, blogger and the creator of this web app.</p>
+                <p class="detailed d2">I love all things related to front-end development and love connecting with
+                    individuals.</p>
+                <a href="https://shyamtala.netlify.app/">Learn more about me</a>
+            </div>
+        </div>
+
+        <div class="social_links">
+            <a href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+            <a href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="#">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+            <a href="#">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+        </div>
+
+        <p class="copyright">© <script>
+                let year = new Date().getFullYear();
+                document.write(year);
+            </script> Monogradient. All rights reserved.</p>
+    </footer>
+
 
     <!-- ion icon cdn script -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <!-- JQuery cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- copy to clipboard -->
     <script src="dist/clipboard.min.js"></script>
