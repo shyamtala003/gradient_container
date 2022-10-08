@@ -107,28 +107,44 @@ span#notify_toast {
 @media screen and (max-width:380px) {
     .color_maker {
         width: 100%;
-        min-height:100vh;
+        min-height: 100vh;
     }
 
-    .color_maker .gradient_card
-    {
+    .color_maker .gradient_card {
         width: 100%;
-        min-height:100vh;
+        min-height: 100vh;
         box-shadow: none;
     }
 
-    .color_maker .gradient_card::before
-    {
+    .color_maker .gradient_card::before {
         display: none;
     }
 }
 
 .container {
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    background: linear-gradient(to right, #6d28d9, #db2777);
+    background: linear-gradient(90deg, #6d28d9,#db2777,#feac5e, #c779d0, #4bc0c8);
+    /* background:linear-gradient(to right, #6d28d9, #db2777); */
+    background-size: 600% 600%;
     padding-inline: 8%;
     overflow-x: hidden;
+    animation: gradient 16s ease infinite;
 }
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 h1.logo_text {
     padding-block: 1.5rem;
@@ -150,7 +166,7 @@ main.hero_section {
 }
 
 .hero_section h2:nth-child(2) {
-    color: #c4b5fb;
+    color: #ffffff;
 }
 
 .form {
