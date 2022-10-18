@@ -1,572 +1,559 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {
-    /* display: none; */
+  /* display: none; */
 }
 
 /* code for toast msg */
 span#notify_toast {
-    position: fixed;
-    top: 90%;
-    right: 5%;
-    background: rgba(0, 0, 0, .8);
-    backdrop-filter: blur(110px);
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #fff;
-    font-family: sans-serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    z-index: 2;
-    transition: all .5s ease;
+  position: fixed;
+  top: 90%;
+  right: 5%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(110px);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  z-index: 2;
+  transition: all 0.5s ease;
 }
 
 .hide_toast {
-    opacity: 0;
+  opacity: 0;
 }
 
 .show_toast {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* code for create gradient dropdoan */
 .color_maker {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    transition: all .5s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: all 0.5s;
 }
 
 .color_maker_close {
-    top: -100%;
+  top: -100%;
 }
 
 #gradient_card_edit {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 #gradient_card_edit input[type="text"] {
-    color: whitesmoke;
-    margin-top: 3em;
+  color: whitesmoke;
+  margin-top: 3em;
 }
 
 #gradient_card_edit #close {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    color: #fff;
-    font-size: 20px;
-    transition: all .5s;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.5s;
 }
 
 #gradient_card_edit #close:hover {
-    scale: 1.5;
-    background: rgba(255, 255, 255, .1);
+  scale: 1.5;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-
 #color_inputs button {
-    font-size: 1.4rem;
-    color: #000;
-    cursor: pointer;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    padding: 5px;
+  font-size: 1.4rem;
+  color: #000;
+  cursor: pointer;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 5px;
 }
 
 #color_inputs button ion-icon {
-    --ionicon-stroke-width: 26px;
+  --ionicon-stroke-width: 26px;
 }
 
 /* make color maker div responsive */
-@media screen and (max-width:380px) {
-    .color_maker {
-        width: 100%;
-        min-height: 100vh;
-    }
+@media screen and (max-width: 380px) {
+  .color_maker {
+    width: 100%;
+    min-height: 100vh;
+  }
 
-    .color_maker .gradient_card {
-        width: 100%;
-        min-height: 100vh;
-        box-shadow: none;
-    }
+  .color_maker .gradient_card {
+    width: 100%;
+    min-height: 100vh;
+    box-shadow: none;
+  }
 
-    .color_maker .gradient_card::before {
-        display: none;
-    }
+  .color_maker .gradient_card::before {
+    display: none;
+  }
 }
 
 .container {
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    background: linear-gradient(to right, #6d28d9, #db2777);
-    padding-inline: 8%;
-    overflow-x: hidden;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: linear-gradient(to right, #6d28d9, #db2777);
+  padding-inline: 8%;
+  overflow-x: hidden;
 }
 
-
-
-
 h1.logo_text {
-    padding-block: 1.5rem;
-    font-size: 20px;
-    line-height: 32px;
-    color: #ffffffd6;
-    border-bottom: 1px solid #ffffff4e;
+  padding-block: 1.5rem;
+  font-size: 20px;
+  line-height: 32px;
+  color: #ffffffd6;
+  border-bottom: 1px solid #ffffff4e;
 }
 
 main.hero_section {
-    padding-block: 3.5rem;
+  padding-block: 3.5rem;
 }
 
 .hero_section h2 {
-    font-size: 36px;
-    line-height: 40px;
-    font-weight: 400;
-    color: #ffffff;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #ffffff;
 }
 
-
 .form {
-    margin-top: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 15px;
-
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 15px;
 }
 
 .form input {
-    padding: 12px 24px;
-    width: min(100%, 350px);
-    border-radius: 5px;
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    border: none;
-    outline: none;
+  padding: 12px 24px;
+  width: min(100%, 350px);
+  border-radius: 5px;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  border: none;
+  outline: none;
 }
 
 .form input::placeholder {
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 .form input:hover,
 .form input:focus {
-    outline: 3px solid rgba(255, 255, 255, .4);
+  outline: 3px solid rgba(255, 255, 255, 0.4);
 }
 
 .form a.btn {
-    padding: 12px 24px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-    color: #ffffff;
-    background: rgba(255, 255, 255, .2);
-    border-radius: 5px;
-    transition: all .3s ease-in-out;
-    border: 1px solid rgba(255, 255, 255, .2);
-    cursor: pointer;
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
 .form a.btn ion-icon {
-    scale: 1.4;
-    --ionicon-stroke-width: 46px;
+  scale: 1.4;
+  --ionicon-stroke-width: 46px;
 }
 
 .form a.btn:hover {
-    background: rgba(255, 255, 255, .4);
-    margin-top: -10px;
+  background: rgba(255, 255, 255, 0.4);
+  margin-top: -10px;
 }
-
 
 /* make hero section fully responsive */
-@media screen and (max-width:640px) {
-    .container {
-        padding-inline: 15px;
-        background: linear-gradient(90deg, #6d28d9, #db2777, #feac5e, #c779d0, #4bc0c8);
-        background-size: 600% 600%;
-        animation: gradient 16s ease infinite;
+@media screen and (max-width: 640px) {
+  .container {
+    padding-inline: 15px;
+    background: linear-gradient(
+      90deg,
+      #6d28d9,
+      #db2777,
+      #feac5e,
+      #c779d0,
+      #4bc0c8
+    );
+    background-size: 600% 600%;
+    animation: gradient 16s ease infinite;
+  }
+
+  .hero_section h2 {
+    font-size: 30px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .form input {
+    width: 100%;
+  }
+
+  .form a {
+    width: 100%;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
     }
 
-    .hero_section h2 {
-        font-size: 30px;
+    50% {
+      background-position: 100% 50%;
     }
 
-    .form {
-        flex-direction: column;
+    100% {
+      background-position: 0% 50%;
     }
-
-    .form input {
-        width: 100%;
-    }
-
-    .form a {
-        width: 100%;
-    }
-
-
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        100% {
-            background-position: 0% 50%;
-        }
-
-    }
+  }
 }
 
-    /* gradient container section */
+/* gradient container section */
 
-    .gradient_container {
-        max-width: 100vw;
-        padding-block: 2.5rem;
-        font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        padding-inline: 8%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-        gap: 5rem;
-        overflow-x: hidden;
-    }
+.gradient_container {
+  max-width: 100vw;
+  padding-block: 2.5rem;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding-inline: 8%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 5rem;
+  overflow-x: hidden;
+}
 
-    .gradient_card {
-        position: relative;
-        min-width: 260px;
-        min-height: 300px;
-        box-shadow: 0px 10px 40px #cec7c7;
-        border-radius: 5px;
-        /* overflow: hidden; */
-    }
+.gradient_card {
+  position: relative;
+  min-width: 260px;
+  min-height: 300px;
+  box-shadow: 0px 10px 40px #cec7c7;
+  border-radius: 5px;
+  /* overflow: hidden; */
+}
 
+.gradient_card:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  scale: 1.02;
+  filter: blur(30px);
+  z-index: -1;
+}
 
-    .gradient_card:hover::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: inherit;
-        scale: 1.02;
-        filter: blur(30px);
-        z-index: -1;
-    }
+.gradient_info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
+.colors {
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
 
-    .gradient_info {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-    }
+input[type="color"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 
-    .colors {
-        background: rgba(255, 255, 255, .8);
-        -webkit-backdrop-filter: blur(25px);
-        backdrop-filter: blur(25px);
-        padding: 10px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 1rem;
-    }
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
 
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 5px;
+  border: none;
+}
 
+input[type="color"]::-moz-color-swatch {
+  border-radius: 5px;
+  border: none;
+}
 
-    input[type="color"] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
+.title_with_copy_btn {
+  background: #fff;
+  padding-inline: 15px;
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-    input[type="color"]::-webkit-color-swatch-wrapper {
-        padding: 0;
-    }
+.title_with_copy_btn h1.gradient_title {
+  font-size: 1.3rem;
+  line-height: 24px;
+  text-transform: capitalize;
+}
 
-    input[type="color"]::-webkit-color-swatch {
-        border-radius: 5px;
-        border: none;
-    }
+.title_with_copy_btn button {
+  font-size: 1.6rem;
+  color: #a5abae;
+  cursor: pointer;
+  background: transparent;
+}
 
-    input[type="color"]::-moz-color-swatch {
-        border-radius: 5px;
-        border: none;
-    }
+.title_with_copy_btn button ion-icon {
+  --ionicon-stroke-width: 56px;
+}
 
-    .title_with_copy_btn {
-        background: #fff;
-        padding-inline: 15px;
-        padding-top: 8px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: .5rem;
-    }
+.gradient_info p {
+  background: #fff;
+  padding-inline: 15px;
+  padding-bottom: 8px;
+  padding-top: 6px;
+  color: #adb1b5;
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 600;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
-    .title_with_copy_btn h1.gradient_title {
-        font-size: 1.3rem;
-        line-height: 24px;
-        text-transform: capitalize;
-    }
+@media screen and (max-width: 640px) {
+  .gradient_container {
+    padding-inline: 15px;
+  }
 
-    .title_with_copy_btn button {
-        font-size: 1.6rem;
-        color: #a5abae;
-        cursor: pointer;
-        background: transparent;
-    }
+  .title_with_copy_btn h1.gradient_title {
+    font-size: 1.1rem;
+    line-height: 20px;
+  }
 
-    .title_with_copy_btn button ion-icon {
-        --ionicon-stroke-width: 56px;
-    }
+  .gradient_info p {
+    font-size: 0.9rem;
+  }
+}
 
-    .gradient_info p {
-        background: #fff;
-        padding-inline: 15px;
-        padding-bottom: 8px;
-        padding-top: 6px;
-        color: #adb1b5;
-        font-size: 1rem;
-        line-height: 24px;
-        font-weight: 600;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-    }
+footer {
+  padding: 4rem 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 18px;
+  line-height: 28px;
+  color: #374151;
+  background: #b3ff99;
+  background-image: radial-gradient(
+      at 0% 0%,
+      hsla(279, 96%, 79%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 100% 0%, hsla(58, 100%, 78%, 1) 0px, transparent 50%),
+    radial-gradient(at 9% 89%, hsla(243, 89%, 78%, 1) 0px, transparent 50%),
+    radial-gradient(at 99% 98%, hsla(10, 100%, 79%, 1) 0px, transparent 50%);
+}
 
+footer p.text {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #434343;
+}
 
-    @media screen and (max-width:640px) {
-        .gradient_container {
-            padding-inline: 15px;
-        }
+.subscription_form {
+  max-width: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
 
-        .title_with_copy_btn h1.gradient_title {
-            font-size: 1.1rem;
-            line-height: 20px;
-        }
+footer input[type="email"] {
+  padding: 10px;
+  border: 2px solid #d1d5db;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(30px);
+  font-size: 0.8rem;
+  width: 100%;
+  border-radius: 5px;
+}
 
-        .gradient_info p {
-            font-size: .9rem;
-        }
-    }
+footer input[type="email"]::placeholder {
+  padding: 10px;
+  font-size: 0.8rem;
+  color: #fff;
+}
 
-    footer
-    {
-        padding: 4rem 8%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: .5rem;
-        justify-content: center;
-        font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-size: 18px;
-        line-height: 28px;
-        color: #374151;
-    }
+footer input[type="email"]:focus {
+  border: 1px solid #7c3aed;
+  outline: none;
+}
 
-    footer p.text
-    {
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: 400;
-    }
+button.subscribe {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(to right, #6d28d9, #db2777);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
 
-    .subscription_form
-    {
-        max-width: 650px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        width: 100%;
-    }
+button.subscribe:hover {
+  background: linear-gradient(90deg, #fd746c, #ff9068);
+  transform: translateY(-10%);
+  box-shadow: 0px 3px 10px #c2c6cc;
+}
 
-    footer input[type="email"]
-    {
-        padding: 10px;
-        border: 2px solid #D1D5DB;
-        font-size: .8rem;
-        width:100%;
-        border-radius: 5px;
-    }
+button.subscribe ion-icon {
+  font-size: 1.2rem;
+  --ionicon-stroke-width: 36px;
+}
 
-    footer input[type="email"]::placeholder
-    {
-        padding: 10px;
-        font-size: .8rem;
-    }
+.contributor_desc {
+  margin-top: 2rem;
+  max-width: 650px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 16px;
+  line-height: 24px;
+}
 
-    footer input[type="email"]:focus
-    {
-        border: 1px solid #7c3aed;
-        outline: none;
-    }
+.contributor_desc img.profile {
+  width: 80px;
+  border-radius: 50%;
+}
 
-    button.subscribe
-    {
-        padding: 12px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        background:linear-gradient(to right, #6d28d9, #db2777);
-        color: #ffffff;
-        font-size: .8rem;
-        font-weight: 600;
-        border-radius: 5px;
-        transition: all .5s;
-    }
+.desc .title {
+  font-weight: 700;
+}
 
-    button.subscribe:hover
-    {
-        background:linear-gradient(90deg,#fd746c, #ff9068);
-        transform: translateY(-10%);
-        box-shadow: 0px 3px 10px #c2c6cc;
-    }
+.desc .detailed {
+  font-weight: 400;
+  line-height: 20px;
+  color: #374151;
+}
 
-    button.subscribe ion-icon
-    {
-        font-size: 1.2rem;
-        --ionicon-stroke-width: 36px;
-    }
+.desc a {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 16px;
+  color: #be185d;
+  border-bottom: 2px solid;
+}
 
-    .contributor_desc
-    {
-        margin-top: 2rem;
-        max-width: 650px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-        font-size: 16px;
-        line-height: 24px;
-    }
+.social_links {
+  margin-top: 5rem;
+  display: flex;
+  gap: 1.8rem;
+  font-size: 1.3rem;
+}
 
-    .contributor_desc img.profile
-    {
-        width: 80px;
-        border-radius: 50%;
-    }
+.social_links a {
+  font-size: 1.3rem;
+  color: #555555;
+  transition: all 0.4s;
+}
 
-    .desc .title
-    {
-        font-weight: 700;
-    }
+.social_links a:hover {
+  color: #737982;
+  transform: translateY(-20%);
+}
 
-    .desc .detailed
-    {
-        font-weight: 400;
-        line-height: 20px;
-        color: #374151;
-    }
+p.copyright {
+  margin-top: 0.5rem;
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-align: center;
+}
 
-    .desc a
-    {
-        display: inline-block;
-        margin-top: 5px;
-        font-size: 16px;
-        color: #be185d;
-        border-bottom: 2px solid;
-    }
+@media screen and (max-width: 510px) {
+  footer {
+    padding: 1rem 15px;
+  }
 
-    .social_links
-    {
-        margin-top: 5rem;
-        display: flex;
-        gap: 1.8rem;
-        font-size: 1.3rem;
-    }
+  footer p.text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
 
-    .social_links a
-    {
-        font-size: 1.3rem;
-        color:#9ca3af;
-        transition: all .4s;
-    }
+  .subscription_form {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-    .social_links a:hover
-    {
-        color:#737982;
-        transform: translateY(-20%);
-    }
+  .subscription_form .subscribe {
+    width: 100%;
+  }
 
-    p.copyright
-    {
-        margin-top: .5rem;
-        color: #9ca3af;
-        font-size: 1rem;
-        line-height: 1.2rem;
-        text-align: center;
-    }
+  .contributor_desc {
+    /* flex-direction: column; */
+    gap: 0.6rem;
+  }
 
-    @media screen and (max-width:510px){
-        footer
-        {
-            padding: 1rem 15px;
-        }
-
-        footer p.text
-        {
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: 400;
-        }
-        
-        .subscription_form
-        {
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .subscription_form .subscribe
-        {
-            width: 100%;
-        }
-
-        .contributor_desc
-        {
-            /* flex-direction: column; */
-            gap: .6rem;
-        }
-
-        .desc .detailed.d2
-        {
-
-            display: none;
-        }
-    }
+  .desc .detailed.d2 {
+    display: none;
+  }
+}
