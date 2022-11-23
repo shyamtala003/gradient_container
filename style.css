@@ -7,7 +7,15 @@
 }
 
 ::-webkit-scrollbar {
-  /* display: none; */
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to top, #e3d2c4, #fcfcfb);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, #ed6ea0, #ec8c69);
 }
 
 /* code for toast msg */
@@ -394,22 +402,37 @@ footer {
   font-size: 18px;
   line-height: 28px;
   color: #374151;
-  background: #b3ff99;
-  background-image: radial-gradient(
-      at 0% 0%,
-      hsla(279, 96%, 79%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 100% 0%, hsla(58, 100%, 78%, 1) 0px, transparent 50%),
-    radial-gradient(at 9% 89%, hsla(243, 89%, 78%, 1) 0px, transparent 50%),
-    radial-gradient(at 99% 98%, hsla(10, 100%, 79%, 1) 0px, transparent 50%);
+  background: linear-gradient(
+    90deg,
+    #6d28d9,
+    #db2777,
+    #feac5e,
+    #c779d0,
+    #4bc0c8
+  );
+  background-size: 600% 600%;
+  animation: gradient_footer 16s ease infinite;
+}
+
+@keyframes gradient_footer {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 footer p.text {
   font-size: 18px;
   line-height: 28px;
   font-weight: 400;
-  color: #434343;
+  color: #ffffff;
 }
 
 .subscription_form {
@@ -429,6 +452,7 @@ footer input[type="email"] {
   font-size: 0.8rem;
   width: 100%;
   border-radius: 5px;
+  color: #fff;
 }
 
 footer input[type="email"]::placeholder {
@@ -486,19 +510,20 @@ button.subscribe ion-icon {
 
 .desc .title {
   font-weight: 700;
+  color: #fff;
 }
 
 .desc .detailed {
   font-weight: 400;
   line-height: 20px;
-  color: #374151;
+  color: #e7e7e7;
 }
 
 .desc a {
   display: inline-block;
   margin-top: 5px;
   font-size: 16px;
-  color: #be185d;
+  color: #ffffff;
   border-bottom: 2px solid;
 }
 
@@ -511,18 +536,18 @@ button.subscribe ion-icon {
 
 .social_links a {
   font-size: 1.3rem;
-  color: #555555;
+  color: #fff;
   transition: all 0.4s;
 }
 
 .social_links a:hover {
-  color: #737982;
+  color: #e3e3e3;
   transform: translateY(-20%);
 }
 
 p.copyright {
   margin-top: 0.5rem;
-  color: #555555;
+  color: #d4d4d4;
   font-size: 1rem;
   line-height: 1.2rem;
   text-align: center;

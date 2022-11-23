@@ -10,17 +10,7 @@ let meshGradientCards = [{
         gradientName: 'mesh gradient',
         gradientMaker: 'ShyamTala'
     },
-    {
-        id: ++autoId,
-        colors: ['#ac9dff', '#9384ff', '#ff93c4', '#ff80cd'],
-        gradientColor: `radial-gradient(at 100% 0%, hsla(249,100%,80%,1) 0px, transparent 50%),
-                    radial-gradient(at 9% 89%, hsla(247,100%,75%,1) 0px, transparent 50%),
-                    radial-gradient(at 99% 98%, hsla(332,100%,78%,1) 0px, transparent 50%),
-                    radial-gradient(at 0% 0%, hsla(323,100%,75%,1) 0px, transparent 50%)`,
-        backgroundColor: '#b3ff99',
-        gradientName: 'killer mesh gradie',
-        gradientMaker: 'ShyamTala'
-    },
+
     {
         id: ++autoId,
         colors: ['#ff8fcd', '#c6fcfe', '#95f3ff', '#b8ffbb'],

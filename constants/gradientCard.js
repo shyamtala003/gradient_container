@@ -15,6 +15,104 @@ let gradientCards = [{
     },
     {
         id: ++autoId,
+        colors: ['#4facfe', '#00f2fe'],
+        gradientColor: 'linear-gradient(to right, #4facfe,#00f2fe)',
+        gradientName: 'malibu beach',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: ++autoId,
+        colors: ['#13547a', '#80d0c7'],
+        gradientColor: 'linear-gradient(to right, #13547a,#80d0c7)',
+        gradientName: 'aqua splash',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: ++autoId,
+        colors: ['#50cc7f', '#f5d100'],
+        gradientColor: 'linear-gradient(to right, #50cc7f,#f5d100)',
+        gradientName: 'millennium pine',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: ++autoId,
+        colors: ['#209cff', '#68e0cf'],
+        gradientColor: 'linear-gradient(to right, #209cff,#68e0cf)',
+        gradientName: 'sea shore',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: ++autoId,
+        colors: ['#ff5858', '#f09819'],
+        gradientColor: 'linear-gradient(to right, #ff5858,#f09819)',
+        gradientName: 'happy memories',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: ++autoId,
+        colors: ['#29323c', '#485563'],
+        gradientColor: 'linear-gradient(to right, #29323c,#485563)',
+        gradientName: 'vicious stance',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: ++autoId,
+        colors: ['#808080', '#3fada8'],
+        gradientColor: 'linear-gradient(to right, #808080,#3fada8)',
+        gradientName: 'vicious stance',
+        gradientMaker: 'allen design'
+    },
+    {
+        id: ++autoId,
+        colors: ['#eaf6a3', '#9aeabf'],
+        gradientColor: 'linear-gradient(to right, #eaf6a3,#9aeabf)',
+        gradientName: 'light shaded',
+        gradientMaker: 'surya design'
+    },
+    {
+        id: ++autoId,
+        colors: ['#f2e7f8', '#cac2ff'],
+        gradientColor: 'linear-gradient(to right, #f2e7f8,#cac2ff)',
+        gradientName: 'light shaded',
+        gradientMaker: 'surya design'
+    },
+    {
+        id: ++autoId,
+        colors: ['#ffffff', '#badbfb'],
+        gradientColor: 'linear-gradient(to right, #ffffff,#badbfb)',
+        gradientName: 'light shaded',
+        gradientMaker: 'surya design'
+    },
+    {
+        id: ++autoId,
+        colors: ['#e0fff9', '#8be7c8'],
+        gradientColor: 'linear-gradient(to right, #e0fff9,#8be7c8)',
+        gradientName: 'light shaded',
+        gradientMaker: 'surya design'
+    },
+    {
+        id: ++autoId,
+        colors: ['#ffe9c9', '#ffd260'],
+        gradientColor: 'linear-gradient(to right, #ffe9c9,#ffd260)',
+        gradientName: 'light shaded',
+        gradientMaker: 'surya design'
+    },
+    {
+        id: ++autoId,
+        colors: ['#ed6ea0', '#ec8c69'],
+        gradientColor: 'linear-gradient(to right, #ed6ea0,#ec8c69)',
+        gradientName: 'royal garden',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: ++autoId,
+        colors: ['#1aa37a', '#9dffb3'],
+        gradientColor: 'linear-gradient(to right, #1aa37a,#9dffb3)',
+        gradientName: 'lush',
+        gradientMaker: 'ShyamTala'
+    },
+    {
+        id: ++autoId,
         colors: ['#12c2e9', '#c471ed', '#f64f59'],
         gradientColor: 'linear-gradient(to right, #12c2e9,#c471ed,#f64f59)',
         gradientName: 'jshine',
