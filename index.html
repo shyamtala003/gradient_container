@@ -1,207 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./favicons/favicon-16x16.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>🌈Monogradients🎉</title>
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png" />
 
-    <!-- circular range slider -->
-    <link rel="stylesheet" href="./dist/jquery.lcnCircleRangeSelect.css" />
-    <script defer src="./dist/jquery.lcnCircleRangeSelect.js"></script>
+  <title>🌈Monogradients🎉</title>
 
-    <!-- general style sheet -->
-    <link rel="stylesheet" href="./style.css" />
-  </head>
+  <!-- circular range slider -->
+  <link rel="stylesheet" href="./dist/jquery.lcnCircleRangeSelect.css" />
+  <script defer src="./dist/jquery.lcnCircleRangeSelect.js"></script>
 
-  <body>
-    <div class="color_maker color_maker_close">
-      <div class="gradient_card" id="gradient_card_edit">
-        <button id="close">
-          <ion-icon name="close"></ion-icon>
-        </button>
-        <input
-          type="text"
-          class="circle-range-select"
-          id="rangeSlider"
-          data-single-value
-          data-auto-init
-          value="34"
-          onchange="generateGradient()"
-        />
-        <div class="gradient_info">
-          <div class="colors" id="color_inputs">
-            <button id="add_input_btn" onclick="addColorInputer()">
-              <ion-icon name="add-outline"></ion-icon>
-            </button>
-            <input
-              class="color colorinput"
-              type="color"
-              value="#6d28d9"
-              id="c1"
-              oninput="generateGradient()"
-            />
-            <input
-              class="color colorinput"
-              type="color"
-              value="#db2777"
-              id="c2"
-              oninput="generateGradient()"
-            />
-          </div>
+  <!-- general style sheet -->
+  <link rel="stylesheet" href="./css/white.css" id="css_link" />
+</head>
 
-          <div class="title_with_copy_btn">
-            <button
-              class="copy_to_clipboard"
-              id="color_maker_copy_btn"
-              data-clipboard-text="background:linear-gradient(to right, #6d28d9, #db2777);"
-            >
-              <ion-icon
-                name="copy-outline"
-                role="img"
-                class="md hydrated"
-                aria-label="copy outline"
-              >
-              </ion-icon>
-            </button>
-          </div>
+<body>
+  <div class="color_maker color_maker_close">
+    <div class="gradient_card" id="gradient_card_edit">
+      <button id="close">
+        <ion-icon name="close"></ion-icon>
+      </button>
+      <input type="text" class="circle-range-select" id="rangeSlider" data-single-value data-auto-init value="34"
+        onchange="generateGradient()" />
+      <div class="gradient_info">
+        <div class="colors" id="color_inputs">
+          <button id="add_input_btn" onclick="addColorInputer()">
+            <ion-icon name="add-outline"></ion-icon>
+          </button>
+          <input class="color colorinput" type="color" value="#6d28d9" id="c1" oninput="generateGradient()" />
+          <input class="color colorinput" type="color" value="#db2777" id="c2" oninput="generateGradient()" />
+        </div>
+
+        <div class="title_with_copy_btn">
+          <button class="copy_to_clipboard" id="color_maker_copy_btn"
+            data-clipboard-text="background:linear-gradient(to right, #6d28d9, #db2777);">
+            <ion-icon name="copy-outline" role="img" class="md hydrated" aria-label="copy outline">
+            </ion-icon>
+          </button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- notifier -->
-    <span id="notify_toast" class="hide_toast">color copied!</span>
+  <!-- notifier -->
+  <span id="notify_toast" class="hide_toast">color copied!</span>
 
-    <div class="container">
-      <nav>
-        <h1 class="logo_text">🌈Monogradients🎉</h1>
-      </nav>
+  <div class="container">
+    <nav>
+      <h1 class="logo_text">🌈Monogradients🎉</h1>
+      <button id="theme_toggler"><ion-icon name="moon"></ion-icon></button>
+    </nav>
 
-      <main class="hero_section">
-        <h2>Explore a constantly updated library of gradients,</h2>
-        <h2>curated by the community.</h2>
+    <main class="hero_section">
+      <h2>Explore a constantly updated library of gradients,</h2>
+      <h2>curated by the community.</h2>
 
-        <div class="form">
-          <!-- <input type="email" placeholder="Enter your email"> -->
-          <a class="btn" id="make_gradient_btn">
-            <ion-icon name="add-outline"></ion-icon> Make Your Own
-          </a>
-          <a
-            href="https://github.com/shyamtala003/gradient_container"
-            class="btn"
-          >
-            <ion-icon name="logo-github"></ion-icon> View on Github
-          </a>
-        </div>
-      </main>
+      <div class="form">
+        <!-- <input type="email" placeholder="Enter your email"> -->
+        <a class="btn" id="make_gradient_btn">
+          <ion-icon name="add-outline"></ion-icon> Make Your Own
+        </a>
+        <a href="https://github.com/shyamtala003/gradient_container" class="btn">
+          <ion-icon name="logo-github"></ion-icon> View on Github
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <div class="gradient_container">
+    <!-- color data comes from below script -->
+    <script src="./constants/meshGradientCard.js"></script>
+    <script src="./constants/gradientCard.js"></script>
+  </div>
+
+  <footer>
+    <p class="text">
+      Join my newsletter to hear about new projects, content and articles that
+      I publish.
+    </p>
+    <div class="subscription_form">
+      <input type="email" placeholder="Enter your email" name="email" id="email_input" />
+      <button class="subscribe">
+        <ion-icon name="mail-outline"></ion-icon> Subscribe
+      </button>
     </div>
 
-    <div class="gradient_container">
-      <!-- color data comes from below script -->
-      <script src="./constants/meshGradientCard.js"></script>
-      <script src="./constants/gradientCard.js"></script>
+    <div class="contributor_desc">
+      <img src="./images/shyam_tala.png" class="profile" alt="" />
+      <div class="desc">
+        <p class="title">Hey there, 👋</p>
+        <p class="detailed d1">
+          I’m Shyam - a full-stack developer, blogger and the creator of this
+          web app.
+        </p>
+        <p class="detailed d2">
+          I love all things related to front-end development and love
+          connecting with individuals.
+        </p>
+        <a href="https://shyamtala.netlify.app/">Learn more about me</a>
+      </div>
     </div>
 
-    <footer>
-      <p class="text">
-        Join my newsletter to hear about new projects, content and articles that
-        I publish.
-      </p>
-      <div class="subscription_form">
-        <input
-          type="email"
-          placeholder="Enter your email"
-          name="email"
-          id="email_input"
-        />
-        <button class="subscribe">
-          <ion-icon name="mail-outline"></ion-icon> Subscribe
-        </button>
-      </div>
+    <div class="social_links">
+      <a href="https://twitter.com/ShyamTala9">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+      <a href="https://www.instagram.com/shyamtala_official/">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+      <a href="https://github.com/shyamtala003">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+      <a href="https://www.linkedin.com/in/shyam-tala-666828169/">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+    </div>
 
-      <div class="contributor_desc">
-        <img src="./images/shyam_tala.jpg" class="profile" alt="" />
-        <div class="desc">
-          <p class="title">Hey there, 👋</p>
-          <p class="detailed d1">
-            I’m Shyam - a full-stack developer, blogger and the creator of this
-            web app.
-          </p>
-          <p class="detailed d2">
-            I love all things related to front-end development and love
-            connecting with individuals.
-          </p>
-          <a href="https://shyamtala.netlify.app/">Learn more about me</a>
-        </div>
-      </div>
+    <p class="copyright">
+      ©
+      <script>
+        let year = new Date().getFullYear();
+        document.write(year);
+      </script>
+      Monogradient. All rights reserved.
+    </p>
+  </footer>
 
-      <div class="social_links">
-        <a href="https://twitter.com/ShyamTala9">
-          <ion-icon name="logo-twitter"></ion-icon>
-        </a>
-        <a href="https://www.instagram.com/shyamtala_official/">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-        <a href="https://github.com/shyamtala003">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-        <a href="https://www.linkedin.com/in/shyam-tala-666828169/">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-      </div>
+  <!-- ion icon cdn script -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-      <p class="copyright">
-        ©
-        <script>
-          let year = new Date().getFullYear();
-          document.write(year);
-        </script>
-        Monogradient. All rights reserved.
-      </p>
-    </footer>
+  <!-- JQuery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- ion icon cdn script -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+  <!-- copy to clipboard -->
+  <script src="dist/clipboard.min.js"></script>
 
-    <!-- JQuery cdn -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+  <!-- main script -->
+  <script src="./main.js"></script>
+</body>
 
-    <!-- copy to clipboard -->
-    <script src="dist/clipboard.min.js"></script>
-
-    <!-- main script -->
-    <script src="./main.js"></script>
-  </body>
 </html>

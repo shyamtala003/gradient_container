@@ -1,3 +1,22 @@
+// theme toggler
+let themeTogglerBtn=document.getElementById('theme_toggler');
+let styleLink=document.getElementById('css_link');
+
+themeTogglerBtn.addEventListener("click",()=>{
+  let icon=Array.from(themeTogglerBtn.children);
+  if(icon[0].name==="moon")
+  {
+    icon[0].setAttribute("name","sunny");
+    styleLink.setAttribute("href","./css/dark.css");
+  }else
+  {
+    icon[0].setAttribute("name","moon");
+    styleLink.setAttribute("href","./css/white.css");
+  }
+})
+
+
+
 // copy to clipboard
 
 
