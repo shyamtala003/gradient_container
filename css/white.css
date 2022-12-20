@@ -139,7 +139,7 @@ span#notify_toast {
   left: 0;
   width: 100%;
   height: 150px;
-  background: linear-gradient(to top,rgba(255, 255, 255, 1),transparent);
+  background: linear-gradient(to top,#e9e7f3,transparent);
   /* backdrop-filter: blur(20px); */
   z-index: -1;
 }
@@ -305,6 +305,7 @@ main.hero_section {
 
 .gradient_container {
     max-width: 100vw;
+    min-height: 100vh;
     padding-block: 2.5rem;
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -313,6 +314,12 @@ main.hero_section {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     gap: 5rem;
     overflow-x: hidden;
+    background: url('../images/light.jpg');
+    /* background-image: linear-gradient(180deg, rgba(255,255,255, 0.01), rgba(255,255,255, 1) 85%),radial-gradient(ellipse at top left, rgba(13,110,253, 0.5), transparent 50%),radial-gradient(ellipse at top right, rgba(255,228,132, 0.5), transparent 50%),radial-gradient(ellipse at center right, rgba(112.520718,44.062154,249.437846, 0.5), transparent 50%),radial-gradient(ellipse at center left, rgba(214,51,132, 0.5), transparent 50%); */
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .gradient_card {
