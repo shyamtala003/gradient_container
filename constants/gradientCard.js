@@ -307,6 +307,111 @@ let gradientCards = [{
         gradientName: 'vice city',
         gradientMaker: 'ShyamTala'
     },
+    {
+        id: ++autoId,
+        colors: ['#ff6e7f', '#bfe9ff'],
+        gradientColor: 'linear-gradient(90deg,#ff6e7f, #bfe9ff)',
+        gradientName: 'noon to dust',
+        gradientMaker: 'ui.ux.gradient'
+    },
+    {
+        id: ++autoId,
+        colors: ['#136fc3', '#76ef66'],
+        gradientColor: 'linear-gradient(90deg,#136fc3, #76ef66)',
+        gradientName: 'smooth combination',
+        gradientMaker: 'ui.ux.gradient'
+    },
+    {
+        id: ++autoId,
+        colors: ['#6f82e4', '#1f2ebe'],
+        gradientColor: 'linear-gradient(90deg,#6f82e4, #1f2ebe)',
+        gradientName: 'smooth combination',
+        gradientMaker: 'ui.ux.gradient'
+    },
+    {
+        id: ++autoId,
+        colors: ['#eeb77d', '#5808b6'],
+        gradientColor: 'linear-gradient(90deg,#eeb77d, #5808b6)',
+        gradientName: 'smooth combination',
+        gradientMaker: 'ui.ux.gradient'
+    },
+    {
+        id: ++autoId,
+        colors: ['#fc8b6a', '#e10467'],
+        gradientColor: 'linear-gradient(90deg,#fc8b6a, #e10467)',
+        gradientName: 'smooth combination',
+        gradientMaker: 'ui.ux.gradient'
+    },
+    {
+        id: ++autoId,
+        colors: ['#ff416c', '#ff4b2b'],
+        gradientColor: 'linear-gradient(90deg,#ff416c, #ff4b2b)',
+        gradientName: 'burning orange',
+        gradientMaker: 'ui.ux.gradient'
+    },
+    {
+        id: ++autoId,
+        colors: ['#a8ff78', '#78ffd6'],
+        gradientColor: 'linear-gradient(90deg,#a8ff78, #78ffd6)',
+        gradientName: 'summer dog',
+        gradientMaker: 'ui.ux.gradient'
+    },
+    {
+        id: ++autoId,
+        colors: ['#fdc830', '#f37335'],
+        gradientColor: 'linear-gradient(90deg,#fdc830, #f37335)',
+        gradientName: 'citrus peel',
+        gradientMaker: 'ui.ux.gradient'
+    },
+    {
+        id: ++autoId,
+        colors: ['#00b4db', '#0083b0'],
+        gradientColor: 'linear-gradient(90deg,#00b4db, #0083b0)',
+        gradientName: 'blue raspberry',
+        gradientMaker: 'ui.ux.gradient'
+    },
+    {
+        id: ++autoId,
+        colors: ['#ff512f', '#dd2476'],
+        gradientColor: 'linear-gradient(90deg,#ff512f, #dd2476)',
+        gradientName: 'bloody mary',
+        gradientMaker: 'ui.ux.gradient'
+    },
+    {
+        id: ++autoId,
+        colors: ['#f09819', '#edde5d'],
+        gradientColor: 'linear-gradient(90deg,#f09819, #edde5d)',
+        gradientName: 'mango pulp',
+        gradientMaker: 'ui.ux.gradient'
+    },
+    {
+        id: ++autoId,
+        colors: ['#ffe259', '#ffa751'],
+        gradientColor: 'linear-gradient(90deg,#ffe259, #ffa751)',
+        gradientName: 'mango',
+        gradientMaker: 'ui.ux.gradient'
+    },
+    {
+        id: ++autoId,
+        colors: ['#5433ff', '#20bdff','#a5fecb'],
+        gradientColor: 'linear-gradient(90deg,#5433ff, #20bdff,#a5fecb)',
+        gradientName: 'lunada',
+        gradientMaker: 'ui.ux.gradient'
+    },
+    {
+        id: ++autoId,
+        colors: ['#acb6e5','#86fde8'],
+        gradientColor: 'linear-gradient(90deg,#acb6e5, #86fde8)',
+        gradientName: 'windy',
+        gradientMaker: 'ui.ux.gradient'
+    },
+    {
+        id: ++autoId,
+        colors: ['#ec008c','#fc6767'],
+        gradientColor: 'linear-gradient(90deg,#ec008c, #fc6767)',
+        gradientName: 'dimigo',
+        gradientMaker: 'ui.ux.gradient'
+    },
 ];
 
 
