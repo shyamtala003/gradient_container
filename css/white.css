@@ -325,7 +325,7 @@ main.hero_section {
 .gradient_card {
     position: relative;
     min-width: 260px;
-    min-height: 300px;
+    min-height: 355px;
     box-shadow: 0px 10px 40px #cec7c7;
     border-radius: 5px;
     /* overflow: hidden; */
@@ -385,6 +385,38 @@ input[type="color"]::-moz-color-swatch {
     border-radius: 5px;
     border: none;
 }
+
+.gradient_code
+{
+  width: 100%;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  line-height: 24px;
+  color: #7dd3fc;
+  background: linear-gradient(to top,rgba(255,255,255,.8),rgba(255,255,255,.8));
+  padding:10px 20px;
+}
+
+.dummy_txt_gradient
+{
+  color:#0069c2;
+}
+
+.dummy_txt_comma,.dummy_txt_bracket_open,.dummy_txt_bracket_close
+{
+  color:#858585;
+}
+
+.dummy_txt_gradient_pos
+{
+  color: #d35538;
+}
+
+.dummy_txt_color_code
+{
+  color: #1b1b1b;
+}
+
 
 .title_with_copy_btn {
     background: #fff;

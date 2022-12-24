@@ -393,21 +393,21 @@ let gradientCards = [{
     },
     {
         id: ++autoId,
-        colors: ['#5433ff', '#20bdff','#a5fecb'],
+        colors: ['#5433ff', '#20bdff', '#a5fecb'],
         gradientColor: 'linear-gradient(90deg,#5433ff, #20bdff,#a5fecb)',
         gradientName: 'lunada',
         gradientMaker: 'ui.ux.gradient'
     },
     {
         id: ++autoId,
-        colors: ['#acb6e5','#86fde8'],
+        colors: ['#acb6e5', '#86fde8'],
         gradientColor: 'linear-gradient(90deg,#acb6e5, #86fde8)',
         gradientName: 'windy',
         gradientMaker: 'ui.ux.gradient'
     },
     {
         id: ++autoId,
-        colors: ['#ec008c','#fc6767'],
+        colors: ['#ec008c', '#fc6767'],
         gradientColor: 'linear-gradient(90deg,#ec008c, #fc6767)',
         gradientName: 'dimigo',
         gradientMaker: 'ui.ux.gradient'
@@ -438,6 +438,75 @@ gradientCards.forEach((element) => {
         colors.append(colorInput)
     })
 
+    function generateColorCode(colors) {
+        console.log(colors);
+        let gradientCode = document.createElement("div");
+        gradientCode.classList.add('gradient_code');
+
+        let dummyTxtGradient = document.createElement("span");
+        dummyTxtGradient.classList.add("dummy_txt_gradient");
+        dummyTxtGradient.textContent = "linear-gradient";
+
+        let dummyTxtBracketOpen = document.createElement("span");
+        dummyTxtBracketOpen.classList.add("dummy_txt_bracket_open");
+        dummyTxtBracketOpen.textContent = "(";
+
+        let dummyTxtBracketClose = document.createElement("span");
+        dummyTxtBracketClose.classList.add("dummy_txt_bracket_close");
+        dummyTxtBracketClose.textContent = ")";
+
+        let dummyTxtGradientPos = document.createElement("span");
+        dummyTxtGradientPos.classList.add("dummy_txt_gradient_pos");
+        dummyTxtGradientPos.textContent = "to right, ";
+
+        let dummyTxtComma = document.createElement("span");
+        dummyTxtComma.classList.add("dummy_txt_comma");
+        dummyTxtComma.textContent = ",";
+
+        let dummyTxtComma2 = document.createElement("span");
+        dummyTxtComma2.classList.add("dummy_txt_comma");
+        dummyTxtComma2.textContent = ",";
+
+        function printHex(colorCode) {
+            let dummyTxtColor = document.createElement("span");
+            dummyTxtColor.classList.add("dummy_txt_color_code");
+            dummyTxtColor.textContent = colorCode;
+
+            gradientCode.append(dummyTxtColor)
+        }
+
+        gradientCode.append(dummyTxtGradient)
+        gradientCode.append(dummyTxtBracketOpen)
+        gradientCode.append(dummyTxtGradientPos)
+        colors.forEach((color, index) => {
+            if (colors.length == 2) {
+                if (index == colors.length - 1) {
+                    printHex(color)
+                } else {
+                    printHex(color)
+                    gradientCode.append(dummyTxtComma)
+                }
+            } else {
+                if (index == colors.length - 1) {
+                    printHex(color)
+                } else {
+                    if (index == 1) {
+                        printHex(color)
+                        gradientCode.append(dummyTxtComma2)
+                    } else {
+                        printHex(color)
+                        gradientCode.append(dummyTxtComma)
+                    }
+                }
+            }
+        })
+        gradientCode.append(dummyTxtBracketClose);
+
+        return gradientCode;
+
+
+    }
+
     let titleWithCopyBtn = document.createElement('div');
     titleWithCopyBtn.classList.add("title_with_copy_btn");
 
@@ -457,11 +526,17 @@ gradientCards.forEach((element) => {
     gradientAuther.textContent = `by ${element.gradientMaker}`;
 
 
+    let gradientCode = generateColorCode(element.colors)
+
     // append elements
+
+
+
     titleWithCopyBtn.append(gradientTitle);
     titleWithCopyBtn.append(coptToClipBoard);
 
-    gradientInfo.append(colors)
+    gradientInfo.append(colors);
+    gradientInfo.append(gradientCode);
     gradientInfo.append(titleWithCopyBtn);
     gradientInfo.append(gradientAuther);
 

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,700;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 * {
   margin: 0;
@@ -345,7 +345,7 @@ main.hero_section {
   position: relative;
   background: transparent;
   min-width: 260px;
-  min-height: 300px;
+  min-height: 355px;
   border:1px solid rgba(0, 0, 0, 0.4)  ;
   box-shadow: 0px 10px 40px #2d2b2b;
   border-radius: 5px;
@@ -392,6 +392,37 @@ main.hero_section {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background: linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,.6));
+}
+
+.gradient_code
+{
+  width: 100%;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  line-height: 24px;
+  color: #7dd3fc;
+  background: linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,.6));
+  padding:10px 20px;
+}
+
+.dummy_txt_gradient
+{
+  color:#f472b6;
+}
+
+.dummy_txt_comma,.dummy_txt_bracket_open,.dummy_txt_bracket_close
+{
+  color:#64748b;
+}
+
+.dummy_txt_gradient_pos
+{
+  color: #7dd3fc;
+}
+
+.dummy_txt_color_code
+{
+  color: #f8fafc;
 }
 
 .colors {
