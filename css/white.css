@@ -124,24 +124,23 @@ span#notify_toast {
     position: relative;
     min-height: 65vh;
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     background: linear-gradient(to right, #6d28d9, #db2777);
     padding-inline: 8%;
     overflow-x: hidden;
     z-index: 1;
 }
 
-.container::before
-{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  background: linear-gradient(to top,#e9e7f3,transparent);
-  /* backdrop-filter: blur(20px); */
-  z-index: -1;
+.container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, #e9e7f3, transparent);
+    /* backdrop-filter: blur(20px); */
+    z-index: -1;
 }
 
 nav {
@@ -258,7 +257,10 @@ main.hero_section {
 
 /* make hero section fully responsive */
 @media screen and (max-width: 640px) {
-    
+    .container {
+        padding-inline: 15px;
+    }
+
     .hero_section h2 {
         font-size: 30px;
     }
@@ -274,10 +276,10 @@ main.hero_section {
     .form a {
         width: 100%;
     }
-    
+
 }
+
 .container {
-    padding-inline: 15px;
     background: linear-gradient(90deg,
             #f12711,
             #6d28d9,
@@ -288,11 +290,12 @@ main.hero_section {
     background-size: 600% 600%;
     animation: gradient 16s ease infinite;
 }
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
     }
-    
+
     50% {
         background-position: 100% 50%;
     }
@@ -315,10 +318,10 @@ main.hero_section {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     gap: 5rem;
     overflow-x: hidden;
-    background: url('../images/rays_2.png'),rgb(255, 255, 255);
+    background: url('../images/rays_2.png'), rgb(255, 255, 255);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     background-position: top center;
     backdrop-filter: blur(20px);
 }
@@ -387,36 +390,33 @@ input[type="color"]::-moz-color-swatch {
     border: none;
 }
 
-.gradient_code
-{
-  width: 100%;
-  font-family: 'Fira Code', monospace;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #7dd3fc;
-  background: linear-gradient(to top,rgba(255,255,255,.8),rgba(255,255,255,.8));
-  padding:10px 20px;
+.gradient_code {
+    width: 100%;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #7dd3fc;
+    background: linear-gradient(to top, rgba(255, 255, 255, .8), rgba(255, 255, 255, .8));
+    padding: 10px 20px;
 }
 
-.dummy_txt_gradient
-{
-  color:#0069c2;
+.dummy_txt_gradient {
+    color: #0069c2;
 }
 
-.dummy_txt_comma,.dummy_txt_bracket_open,.dummy_txt_bracket_close
-{
-  color:#858585;
+.dummy_txt_comma,
+.dummy_txt_bracket_open,
+.dummy_txt_bracket_close {
+    color: #858585;
 }
 
-.dummy_txt_gradient_pos
-{
-  color: #d35538;
+.dummy_txt_gradient_pos {
+    color: #d35538;
 }
 
-.dummy_txt_color_code
-{
-  color: #1b1b1b;
+.dummy_txt_color_code {
+    color: #1b1b1b;
 }
 
 

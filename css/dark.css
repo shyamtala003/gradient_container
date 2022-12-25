@@ -18,7 +18,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background:linear-gradient(to top, #00b09b, #96c93d);
+  background: linear-gradient(to top, #00b09b, #96c93d);
 }
 
 /* code for toast msg */
@@ -27,12 +27,12 @@ span#notify_toast {
   top: 90%;
   right: 5%;
   background: rgba(0, 0, 0, 0.3);
-  border:2px solid #fff;
+  border: 2px solid #fff;
   backdrop-filter: blur(110px);
   padding: 10px 20px;
   border-radius: 5px;
   color: #fff;
-  font-family:  Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
   z-index: 2;
@@ -135,21 +135,19 @@ span#notify_toast {
   z-index: 1;
 }
 
-.container::before
-{
+.container::before {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 150px;
-  background: linear-gradient(to top,#0b1121,transparent);
+  background: linear-gradient(to top, #0b1121, transparent);
   backdrop-filter: blur(20px);
   z-index: -1;
 }
 
-nav
-{
+nav {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -164,29 +162,26 @@ nav h1.logo_text {
   color: #ffffffd6;
 }
 
-nav #theme_toggler
-{
+nav #theme_toggler {
   position: relative;
   background: rgba(255, 255, 255, 0.2);
   padding: 20px;
   text-align: center;
-  border-radius:50%;
+  border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
   border: 2px solid #fcfcfb9d;
 }
 
-nav #theme_toggler:hover
-{
+nav #theme_toggler:hover {
   scale: 1.1;
 }
 
-nav #theme_toggler ion-icon
-{
+nav #theme_toggler ion-icon {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   color: #ffffff;
 }
 
@@ -266,7 +261,10 @@ main.hero_section {
 
 /* make hero section fully responsive */
 @media screen and (max-width: 640px) {
-  
+  .container {
+    padding-inline: 15px;
+  }
+
   .hero_section h2 {
     font-size: 30px;
   }
@@ -286,16 +284,13 @@ main.hero_section {
 }
 
 .container {
-  padding-inline: 15px;
-  background: linear-gradient(
-    90deg,
-    #f12711,
-    #6d28d9,
-    #db2777,
-    #feac5e,
-    #c779d0,
-    #4bc0c8
-  );
+  background: linear-gradient(90deg,
+      #f12711,
+      #6d28d9,
+      #db2777,
+      #feac5e,
+      #c779d0,
+      #4bc0c8);
   background-size: 600% 600%;
   animation: gradient 16s ease infinite;
 }
@@ -313,6 +308,7 @@ main.hero_section {
     background-position: 0% 50%;
   }
 }
+
 /* gradient container section */
 
 .gradient_container {
@@ -320,27 +316,26 @@ main.hero_section {
   min-height: 100vh;
   padding-block: 2.5rem;
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   padding-inline: 8%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
   gap: 5rem;
   overflow-x: hidden;
-  background: url('../images/rays_!.png'),rgb(17,24,39);
+  background: url('../images/rays_!.png'), rgb(17, 24, 39);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-position: top center;
   backdrop-filter: blur(20px);
 }
 
 
 
-.gradient_container .gradient_card:hover
-{
+.gradient_container .gradient_card:hover {
   filter: blur(0px);
-    transform: translateY(-5px);
-    opacity: 1;
+  transform: translateY(-5px);
+  opacity: 1;
 }
 
 .gradient_card {
@@ -348,7 +343,7 @@ main.hero_section {
   background: transparent;
   min-width: 260px;
   min-height: 355px;
-  border:1px solid rgba(0, 0, 0, 0.4)  ;
+  border: 1px solid rgba(0, 0, 0, 0.4);
   box-shadow: 0px 10px 40px #2d2b2b;
   border-radius: 5px;
   /* overflow: hidden; */
@@ -393,42 +388,39 @@ main.hero_section {
   width: 100%;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  background: linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,.6));
+  background: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .6));
 }
 
-.gradient_code
-{
+.gradient_code {
   width: 100%;
   font-family: 'Fira Code', monospace;
   font-size: 14px;
   line-height: 24px;
   color: #7dd3fc;
-  background: linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,.6));
-  padding:10px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .6));
+  padding: 10px 20px;
 }
 
-.dummy_txt_gradient
-{
-  color:#f472b6;
+.dummy_txt_gradient {
+  color: #f472b6;
 }
 
-.dummy_txt_comma,.dummy_txt_bracket_open,.dummy_txt_bracket_close
-{
-  color:#64748b;
+.dummy_txt_comma,
+.dummy_txt_bracket_open,
+.dummy_txt_bracket_close {
+  color: #64748b;
 }
 
-.dummy_txt_gradient_pos
-{
+.dummy_txt_gradient_pos {
   color: #7dd3fc;
 }
 
-.dummy_txt_color_code
-{
+.dummy_txt_color_code {
   color: #f8fafc;
 }
 
 .colors {
-  background: linear-gradient(to top,rgba(0,0,0,.4),rgba(0,0,0,.4));
+  background: linear-gradient(to top, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4));
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
   padding: 10px 20px;
@@ -477,7 +469,7 @@ input[type="color"]::-moz-color-swatch {
   font-size: 1.3rem;
   line-height: 24px;
   text-transform: capitalize;
-  font-family:  'Lobster Two', cursive;
+  font-family: 'Lobster Two', cursive;
   font-weight: 700;
 }
 
@@ -488,8 +480,7 @@ input[type="color"]::-moz-color-swatch {
   background: transparent;
 }
 
-.title_with_copy_btn button:hover
-{
+.title_with_copy_btn button:hover {
   transform: scale(1.1);
 }
 
@@ -502,7 +493,7 @@ input[type="color"]::-moz-color-swatch {
 }
 
 .gradient_info p {
-  background:transparent;
+  background: transparent;
   padding-inline: 15px;
   padding-bottom: 8px;
   padding-top: 6px;
@@ -541,14 +532,12 @@ footer {
   font-size: 18px;
   line-height: 28px;
   color: #374151;
-  background: linear-gradient(
-    90deg,
-    #6d28d9,
-    #db2777,
-    #feac5e,
-    #c779d0,
-    #4bc0c8
-  );
+  background: linear-gradient(90deg,
+      #6d28d9,
+      #db2777,
+      #feac5e,
+      #c779d0,
+      #4bc0c8);
   background-size: 600% 600%;
   animation: gradient_footer 16s ease infinite;
 }
