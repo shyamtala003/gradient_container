@@ -266,20 +266,7 @@ main.hero_section {
 
 /* make hero section fully responsive */
 @media screen and (max-width: 640px) {
-  .container {
-    padding-inline: 15px;
-    background: linear-gradient(
-      90deg,
-      #6d28d9,
-      #db2777,
-      #feac5e,
-      #c779d0,
-      #4bc0c8
-    );
-    background-size: 600% 600%;
-    animation: gradient 16s ease infinite;
-  }
-
+  
   .hero_section h2 {
     font-size: 30px;
   }
@@ -296,40 +283,55 @@ main.hero_section {
     width: 100%;
   }
 
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-
-    50% {
-      background-position: 100% 50%;
-    }
-
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 }
 
+.container {
+  padding-inline: 15px;
+  background: linear-gradient(
+    90deg,
+    #f12711,
+    #6d28d9,
+    #db2777,
+    #feac5e,
+    #c779d0,
+    #4bc0c8
+  );
+  background-size: 600% 600%;
+  animation: gradient 16s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
 /* gradient container section */
 
 .gradient_container {
-  background: #010409;
   max-width: 100vw;
   min-height: 100vh;
   padding-block: 2.5rem;
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   padding-inline: 8%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
   gap: 5rem;
   overflow-x: hidden;
-  background: url('../images/dark.jpg');
+  background: url('../images/rays_!.png'),rgb(17,24,39);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size:cover;
-  background-position: center;
+  background-position: top center;
+  backdrop-filter: blur(20px);
 }
 
 

@@ -258,18 +258,7 @@ main.hero_section {
 
 /* make hero section fully responsive */
 @media screen and (max-width: 640px) {
-    .container {
-        padding-inline: 15px;
-        background: linear-gradient(90deg,
-                #6d28d9,
-                #db2777,
-                #feac5e,
-                #c779d0,
-                #4bc0c8);
-        background-size: 600% 600%;
-        animation: gradient 16s ease infinite;
-    }
-
+    
     .hero_section h2 {
         font-size: 30px;
     }
@@ -285,19 +274,31 @@ main.hero_section {
     .form a {
         width: 100%;
     }
+    
+}
+.container {
+    padding-inline: 15px;
+    background: linear-gradient(90deg,
+            #f12711,
+            #6d28d9,
+            #db2777,
+            #feac5e,
+            #c779d0,
+            #4bc0c8);
+    background-size: 600% 600%;
+    animation: gradient 16s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    
+    50% {
+        background-position: 100% 50%;
+    }
 
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        100% {
-            background-position: 0% 50%;
-        }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
@@ -314,12 +315,12 @@ main.hero_section {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     gap: 5rem;
     overflow-x: hidden;
-    background: url('../images/light.jpg');
-    /* background-image: linear-gradient(180deg, rgba(255,255,255, 0.01), rgba(255,255,255, 1) 85%),radial-gradient(ellipse at top left, rgba(13,110,253, 0.5), transparent 50%),radial-gradient(ellipse at top right, rgba(255,228,132, 0.5), transparent 50%),radial-gradient(ellipse at center right, rgba(112.520718,44.062154,249.437846, 0.5), transparent 50%),radial-gradient(ellipse at center left, rgba(214,51,132, 0.5), transparent 50%); */
+    background: url('../images/rays_2.png'),rgb(255, 255, 255);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size:cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: top center;
+    backdrop-filter: blur(20px);
 }
 
 .gradient_card {
@@ -392,6 +393,7 @@ input[type="color"]::-moz-color-swatch {
   font-family: 'Fira Code', monospace;
   font-size: 14px;
   line-height: 24px;
+  font-weight: 700;
   color: #7dd3fc;
   background: linear-gradient(to top,rgba(255,255,255,.8),rgba(255,255,255,.8));
   padding:10px 20px;
